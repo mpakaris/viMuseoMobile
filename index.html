@@ -3,10 +3,77 @@
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
   <link rel="stylesheet" href="style.css" />
+  <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
   <title>ViMuseo</title>
  </head>
  <body>
-  <h1 class="title">Welcome to Test-Site</h1>
+  <header>
+   <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">
+     <img
+      src="https://vimuseo.de/images/vimuseo-logo.png"
+      alt="logo viMuseo"
+      style="width: 200px"
+     />
+    </a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+     <i class="fa fa-bars"></i>
+    </a>
+   </div>
+
+   <div id="myNav" class="overlay">
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+     >&times;</a
+    >
+    <!-- Overlay content -->
+    <div class="overlay-content">
+     <a href="#">Online Besuche</a>
+     <a href="#">Ausstellungen</a>
+     <a href="#">Shops</a>
+     <a href="#">Museum News</a>
+     <a href="#">Museum News</a>
+     <a href="#">Blogs Museen & Kultur</a>
+     <a href="#">Museumsnächte</a>
+     <a href="#">Städte/Regionen entdecken</a>
+     <a href="#">Kulturreise Anbieter</a>
+     <a href="#">Registrierung Besucher</a>
+     <a href="#">Registrierung Partner</a>
+    </div>
+   </div>
+
+   <!-- Use any element to open/show the overlay navigation menu -->
+   <!-- <span onclick="openNav()">open</span> -->
+  </header>
  </body>
+ <script>
+  function openNav() {
+   document.getElementById("myNav").style.width = "100%";
+  }
+
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeNav() {
+   document.getElementById("myNav").style.width = "0%";
+  }
+
+  function myFunction() {
+   var x = document.getElementById("myTopnav");
+   if (x.className === "topnav") {
+    x.className += " responsive";
+   } else {
+    x.className = "topnav";
+   }
+  }
+ </script>
 </html>
