@@ -6,10 +6,16 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Russo+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <title>ViMuseo</title>
  </head>
  <body>
+  <div class="video-cover">
+    <div class="cover-color"></div>
+    <video playsinline autoplay muted loop id="bgvid">
+      <source src="img/bg-vid.mp4" type="video/mp4">
+    </video>
+  </div>
   <header>
     <div class="menu-wrapper">
       <div class="hamburger-menu"></div>    
@@ -18,14 +24,14 @@
       <figure class="logo-top">
         <img src="https://vimuseo.com/images/vimuseo-logo-en.png" alt="Vimuseo logo">
       </figure>
-      <ul class="nav-links">
-        <li>Exhibitions</li>
-        <li>Shops</li>
-        <li>Online Visits</li>
-        <li>More</li>
-        <li>Log In</li>
-        <li>Create a free account</li>
-      </ul>
+      <div class="nav-links">
+        <div class="nav-link-1">Exhibitions</div>
+        <div class="nav-link-2">Shops</div>
+        <div class="nav-link-3">Online Visits</div>
+        <div class="nav-link-4">More</div>
+        <div class="nav-link-5">Log In</div>
+        <div class="nav-link-6">Create a free account</div>
+      </div>
       <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
         <i class="fa fa-bars"></i>
       </a>
@@ -38,23 +44,20 @@
         <button class="cta-button1">Get Started</button>
         <button class="cta-button2">Learn More</button>
     </section>
-    <section>
+    <section class="online-experiences">
       <h3>Online Experinces</h3>
-      <article>
-        
-        <h5>Universalmuseum Kierling</h5>
+      <p>Visit any number of exhibitions through your browser window.</p>
+      <article class="online-visit-1">
+        <h5><i class="fas fa-map-marker-alt"></i> Universalmuseum Kierling</i></h5>
       </article>
-      <article>
-        
-        <h5>Museum Pachen</h5>
+      <article class="online-visit-2">
+        <h5><i class="fas fa-map-marker-alt"></i> Museum Pachen</h5>
       </article>
-      <article>
-        
-        <h5>ViMuseo Museum</h5>
+      <article class="online-visit-3">
+        <h5><i class="fas fa-map-marker-alt"></i> ViMuseo Museum</h5>
       </article>
-      <article>
-        
-        <h5>Dommuseum Ottonianum Magdeburg</h5>
+      <article class="online-visit-4">
+        <h5><i class="fas fa-map-marker-alt"></i> Dommuseum Ottonianum Magdeburg</h5>
       </article>
     </section>
     <section>

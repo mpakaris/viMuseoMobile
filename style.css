@@ -13,9 +13,31 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+body video {
+  z-index: -100;
+  object-fit: cover;
+  width: 100vw;
+  position: relative;
+  min-height: 600px;
+  background-blend-mode: multiply;
+}
+
+.cover-color {
+  grid-column: 1/4;
+  width: 100%;
+  background-image: linear-gradient(white 1%, black);
+  min-height: 450px;
+  position: absolute;
+  z-index: -99;
+  mix-blend-mode: screen;
+}
+
 header {
   grid-row: 1;
   grid-column: 1 / 4;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 .nav-top {
@@ -23,6 +45,7 @@ header {
   grid-template-columns: 200px auto 72px;
   grid-template-rows: 72px auto;
   overflow: hidden;
+  row-gap: 16px;
 }
 
 .logo-top {
@@ -39,6 +62,47 @@ header {
 
 .nav-links {
   display: none;
+  height: auto;
+  grid-row: 2;
+  grid-column: 1 / 4;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 33.3% 33.3% 33.3%;
+}
+
+.nav-links div {
+  text-align: center;
+  height: 72px;
+  line-height: 72px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.nav-link-1 { 
+  background-image: linear-gradient(#75d373,#75d373), url("https://vimuseo.com/images/menu/Menu-Austellungen.jpg");
+}
+
+.nav-link-2 {
+  background-image: linear-gradient(#75d373,#75d373), url("https://vimuseo.com/images/menu/Menu-Shops.jpg");
+}
+
+.nav-link-3 {
+  background-image: linear-gradient(#75d373,#75d373), url("https://vimuseo.com/images/menu/Menu-Virtueller-Rundgang.jpg");
+}
+
+.nav-link-4 {
+  background-image: linear-gradient(#75d373,#75d373), url("https://vimuseo.com/images/menu/Menu-Nachrichten.jpg");
+}
+
+.nav-link-5 {
+  background-image: linear-gradient(#75d373,#75d373), url("https://vimuseo.com/images/menu/Menu-BesucherRegistrierung.jpg");
+}
+
+.nav-link-6 {
+  background-image: linear-gradient(#75d373,#75d373), url("https://vimuseo.com/images/menu/Menu-PartnerRegistrierung.jpg");
 }
 
 .nav-top ul li{
@@ -50,13 +114,6 @@ header {
 .nav-top ul li::before {
   content: "* ";
   vertical-align: middle;
-}
-
-.nav-top ul {
-  height: auto;
-  grid-row: 2;
-  grid-column: 1;
-  text-align: end;
 }
 
 .icon {
@@ -71,6 +128,49 @@ header {
   grid-column: 2;
   display: grid;
   grid-template-rows: auto;
+  gap: 32px;
+}
+
+.online-experiences {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: auto;
+  gap: 16px;
+}
+
+.online-experiences h3 {
+  font-size: 24px;
+}
+
+.online-experiences p {
+  font-style: italic;
+}
+
+.online-experiences article {
+  text-align: left;
+  line-height: 475px;
+  padding: 6px;
+  font-size: 24px;
+  color: white;
+  height: 250px;
+  background-size: cover;
+  background-blend-mode: hard-light;
+}
+
+.online-visit-1 {
+  background-image: linear-gradient( rgba(255, 255, 255, 0) 70%, #6a1921), url("https://vimuseo.com/var/Userdata/23822/Galerie/gal2382204144ba148b47ff04be6801479ffc152b.jpg");
+}
+
+.online-visit-2 {
+  background-image: linear-gradient( rgba(255, 255, 255, 0) 70%, #6a1921), url("https://vimuseo.com/var/Userdata/24651/Galerie/gal246510e3504c3fd8bbf81c36dc8e93f5bda382.jpg");
+}
+
+.online-visit-3 {
+  background-image: linear-gradient( rgba(255, 255, 255, 0) 70%, #6a1921), url("https://vimuseo.com/var/Userdata/25221/Galerie/gal2522125fdf57f2d7b2e2249a17c78b3600fed.jpg");
+}
+
+.online-visit-4 {
+  background-image: linear-gradient( rgba(255, 255, 255, 0) 70%, #6a1921), url("https://vimuseo.com/var/Userdata/26022/Galerie/gal26022e62677fc89a83cac7cf6c34107a612ea.jpg");
 }
 
 footer figure img{
@@ -84,11 +184,8 @@ footer {
 
 .cta {
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto 235px 135px auto;
   grid-template-columns: 30% 35% 35%;
-  background-position: center;
-  background-clip: content-box;
-  
 }
 
 .cta h1{
@@ -99,14 +196,15 @@ footer {
 }
 
 .cta p {
-  grid-row: 2;
+  grid-row: 3;
   grid-column: 1 /4;
   font-style: italic;
   font-size: large;
-  margin: 1em 0 1em;
+  color: white;
 }
 
 .cta button {
+  grid-row: 4;
   background-color: #75d373;
   color: white;
   height: 2.5em;
