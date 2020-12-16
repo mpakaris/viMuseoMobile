@@ -79,6 +79,11 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: multiply;
+  border-top: 2px solid rgba(255, 255, 255, 0);
+}
+
+.nav-links div:nth-of-type(odd) {
+  border-right: 2px solid rgba(255, 255, 255, 0);
 }
 
 .nav-link-1 { 
@@ -173,13 +178,127 @@ header {
   background-image: linear-gradient( rgba(255, 255, 255, 0) 70%, #6a1921), url("https://vimuseo.com/var/Userdata/26022/Galerie/gal26022e62677fc89a83cac7cf6c34107a612ea.jpg");
 }
 
-footer figure img{
-  width: 33%;
+.on-site {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto;
+  gap: 16px;
+}
+
+.on-site h3 {
+  font-size: 24px;
+}
+
+.on-site article {
+  font-size: 24px;
+  height: 150px;
+  padding: 6px;
+  color: white;
+  background-size: cover;
+  background-blend-mode: hard-light;
+  text-align: right;
+  position: relative;
+  z-index: -15;
+}
+
+.on-site h6{
+ position: absolute;
+ top: 130px;
+}
+
+.on-site p {
+  font-style: italic;
+}
+
+.exhibition-1 {
+  background-image: linear-gradient( #6a1921, rgba(255, 255, 255, 0) 70%, #6a1921), url("https://vimuseo.com/var/Userdata/25123/Ausstellung/Images/ausprofil25123011ee0fedbc993ed7edd1add3b57a0217.jpg");
+}
+
+.exhibition-2 {
+  background-image: linear-gradient( #6a1921, rgba(255, 255, 255, 0) 70%, #6a1921), url("https://vimuseo.com/var/Userdata/1672/Ausstellung/Images/ausprofil167200644cf85d93e941db3a4a1dab7947e8a.jpg");
+}
+
+.finder {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto;
+  gap: 12px;
+}
+
+.finder p {
+  font-style: italic;
+}
+
+.finder select{
+  background-color: #75d373;
+  border: none;
+  height: 48px;
+  color: white;
+}
+
+.finder input:nth-of-type(1) {
+  background-color: lightgray;
+  border: none;
+  height: 48px;
+  color: darkgray;
+  /*fix this stoopidness*/
+  width: 210px;
+  font-size: 14 px;
+}
+
+.finder button {
+  background-color: lightgray;
+  border: none;
+  height: 48px;
+  width: 48px;
 }
 
 footer {
   grid-row: 3;
   grid-column: 2;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: auto;
+  gap: 30px;
+}
+
+footer figure {
+  grid-row: 1;
+  display: grid;
+  margin-top: 75px;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows: auto 15px;
+  justify-content: center;
+  gap: 70px;
+}
+
+footer figure img{
+  width: 100%;
+  grid-column: 2;
+}
+
+footer small {
+  width: 100%;
+  grid-row: 2;
+  text-align: center;
+  grid-column: 1 / 4;
+}
+
+footer h5 {
+  font-size: 16px;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer li {
+  margin-top: 6px;
+  background-color:#75d373;
+  color: white;
+  height: 2em;
+  line-height: 2em;
+  padding: 3px;
 }
 
 .cta {
