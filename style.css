@@ -162,6 +162,7 @@ header {
   background-blend-mode: hard-light;
 }
 
+
 .online-visit-1 {
   background-image: linear-gradient( rgba(255, 255, 255, 0) 70%, #6a1921), url("https://vimuseo.com/var/Userdata/23822/Galerie/gal2382204144ba148b47ff04be6801479ffc152b.jpg");
 }
@@ -324,6 +325,7 @@ footer li {
 
 .cta button {
   grid-row: 4;
+
   background-color: #75d373;
   color: white;
   height: 2.5em;
@@ -344,12 +346,7 @@ footer li {
   grid-column: 3;
   max-width: 150px;
   margin-left: auto;
-  
 }
-
 
 @media only screen and (min-width: 768px) {
-
 }
-
-

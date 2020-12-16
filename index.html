@@ -3,9 +3,14 @@
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Russo+One&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <title>ViMuseo</title>
  </head>
@@ -84,7 +89,6 @@
         <button><i class="fas fa-search"></i></button>
       </form>
     </section>
-    
    </div>
   <footer>
     <figure>
@@ -119,4 +123,23 @@
   </footer>
   <script src="script.js"></script>
  </body>
+ <script>
+  function openNav() {
+   document.getElementById("myNav").style.width = "100%";
+  }
+
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeNav() {
+   document.getElementById("myNav").style.width = "0%";
+  }
+
+  function myFunction() {
+   var x = document.getElementById("myTopnav");
+   if (x.className === "topnav") {
+    x.className += " responsive";
+   } else {
+    x.className = "topnav";
+   }
+  }
+ </script>
 </html>
